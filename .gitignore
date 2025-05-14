@@ -172,3 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# AVA cache
+AVA_cache/
+
+# video data
+datas/*/videos/*

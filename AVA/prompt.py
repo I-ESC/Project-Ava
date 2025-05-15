@@ -223,3 +223,184 @@ Response in clean JSON format:
   "Answer": "[A, B, C or D]"
 }}
 """
+
+PROMPTS["checkframe_and_answer_COT"] = """
+You are an AI assistant. Your specific task is to analyze video frames and answer a multiple-choice question based on them.
+
+**Your Instructions:**
+
+1.  **Understand the Question:** First, carefully read the `User Query` below. This is the multiple-choice question you need to answer.
+2.  **Examine Video Frames:** Next, review the provided video frames. Focus on details that help answer the `User Query`.
+3.  **Reason Step-by-Step:** Think through how the information in the video frames leads to the answer. Write down this thinking process. This will be your "Analysis".
+4.  **Choose the Best Answer:** Based on your reasoning, select only ONE letter (A, B, C, or D) that is the correct answer to the `User Query`. This will be your "Answer".
+5.  **Provide Output in JSON Format ONLY:**
+    * Your entire response MUST be a single JSON object.
+    * Do NOT write any text or explanation before or after the JSON object.
+    * The JSON object must have exactly two keys:
+        * `"Analysis"`: This key's value should be your step-by-step reasoning from step 3.
+        * `"Answer"`: This key's value should be the single letter (A, B, C, or D) you chose in step 4.
+
+**User Query:** {user_query}
+
+**REMEMBER: Your response MUST strictly follow this JSON structure:**
+```json
+{{
+  "Analysis": "Your detailed step-by-step reasoning, explaining how you used the video frames to answer the User Query, goes here.",
+  "Answer": "A" // Or "B", or "C", or "D". Just the single capital letter.
+}}
+"""
+
+# ------------AVA-100 specific prompts------------
+
+PROMPTS["generate_description_ego"] = """
+You are an expert in video understanding and description generation. 
+You are given a first-person perspective video, and your task is to generate a continuous, smooth, and grounded description of the video content.
+
+Focus particularly on:
+- The actions and events performed by the camera wearer (the person holding or wearing the camera).
+- The surrounding environment, including objects, people, and notable visual changes.
+- The physical characteristics and spatial relationships of objects in the environment (e.g., size, color, relative positions, proximity to the camera wearer).
+- Interactions between the camera wearer and the environment, including object manipulations and movements through space.
+
+Avoid describing each frame individually, such as "frame1...". Instead, provide a coherent and logically structured narrative that flows smoothly over time.
+
+Important constraints:
+- Do not include assumptions, inferences, or fabricated details that are not visually evident.
+- Do not speculate about the identity, emotions, or intentions of the camera wearer unless explicitly shown.
+- When referring to the person holding or wearing the camera, always use the term “camera wearer”.
+
+Return your response as a single, continuous, and fluent paragraph that comprehensively describes the video content, including fine-grained visual details, and limit the length to 400 words.
+"""
+
+PROMPTS["generate_description_citytour"] = """
+You are an expert in video understanding and detailed scene description. 
+You are given a first-person perspective video of a person walking through a city environment. 
+Your task is to generate a continuous, smooth, and grounded description of the video content.
+
+Focus particularly on:
+- The locations and landmarks the camera wearer passes by, such as buildings, shops, streets, and public spaces.
+- The appearance and functions of these places (e.g., a small bakery with a red awning, a tall glass office building, a busy intersection).
+- Events or notable occurrences observed during the walk, such as street performances, traffic changes, or people interacting in public.
+
+Avoid describing each frame individually. Instead, provide a logically structured narrative that flows naturally over time.
+
+Important constraints:
+- Do not include assumptions, inferences, or fabricated details that are not visually evident.
+- Do not speculate about the identity, emotions, or intentions of the camera wearer or other people unless explicitly shown.
+- When referring to the person holding or wearing the camera, always use the term “camera wearer”.
+
+Return your response as a single, continuous, and fluent paragraph that comprehensively describes the video content, with attention to fine-grained urban and visual details, and limit the length to 400 words.
+"""
+
+PROMPTS["generate_description_wildlife"] = """
+You are an expert in video analysis, specializing in wildlife observation and detailed environmental description.  
+You are analyzing fixed-camera surveillance footage capturing a scene in a wild or natural environment.  
+Your task is to generate a precise, grounded, and chronologically ordered description of the entire video segment.
+
+Focus on the following aspects:
+
+- **Observed Animals:** Identify any animals present in the footage. For the entire segment, provide a consolidated description of:
+    - **Species:** Identify species as accurately as possible. If uncertain, describe physical characteristics (e.g., "a large brown bear", "a small rodent-like mammal", "a flock of unidentified birds").
+    - **Number:** Indicate the number of individuals observed.
+    - **Appearance:** Note distinctive physical features (e.g., size, color, antlers, markings).
+    - **Behavior:** Describe observed behaviors (e.g., foraging, running, resting, entering/exiting the frame, interacting).
+
+- **Timestamps:** Identify the timestamp displayed in the surveillance footage.
+
+- **Environment:** Briefly describe the static environment visible to the camera (e.g., forest clearing, rocky terrain, vegetation), and note any significant changes during the observation period (e.g., lighting shifts, weather changes).
+
+**Output Format:**  
+After reviewing the full segment, summarize your findings in a single structured paragraph using the following format:
+
+[Timestamp]: [Environment description][Summary of animal and their activities]
+
+**Important Constraints:**
+- Do not include assumptions or invented details that are not visually evident in the footage.
+- Do not speculate on the intentions or emotions of the animals; describe only observable actions and postures.
+- Refer to observations using neutral terms such as "the footage shows" or "the camera captures"; avoid subjective phrasing like "we see" or "the viewer can observe".
+- If species identification is uncertain, explicitly state this.
+- The final output should be a concise, fact-based summary of the wildlife activity and environmental context of the segment, with a target length of approximately 400 words.
+"""
+
+PROMPTS["generate_description_traffic"] = """
+You are a video analysis expert specializing in traffic observation and detailed event description. You are analyzing a road or intersection surveillance video recorded by a fixed-position camera.
+
+Your task is to generate an **accurate, grounded, and coherent** description of the video segment.
+
+Please focus on the following aspects:
+
+- **Observed Traffic Elements:** Identify all traffic-related elements present in the video. Provide an integrated description covering the entire segment:
+    - **Vehicle Types:** Identify types as accurately as possible (e.g., car, truck, bus, motorcycle, bicycle, van). If unclear, describe the vehicle’s physical characteristics (e.g., “a large box truck,” “a small passenger vehicle,” “a two-wheeled vehicle”).
+    - **Quantity:** Indicate the number of each identified vehicle type, as well as the number of pedestrians.
+    - **Characteristics:** If relevant to the scene, note distinguishing physical features (e.g., color, size, presence of trailers, specific structural features). Describe pedestrians based on their interaction with traffic (e.g., walking along the sidewalk, crossing the street).
+    - **Actions / Events:** Describe observed dynamic behaviors and interactions (e.g., driving in a specific lane, stopping, turning, entering/exiting the frame, changing lanes, overtaking, pedestrians waiting or crossing), including any **traffic anomalies** (e.g., sudden braking, erratic maneuvers, red-light violations, collisions, traffic violations, illegal parking that obstructs traffic).
+
+- **Timestamps:** Identify the timestamp shown on the surveillance footage.
+
+**Output Format:**
+After watching the full video segment, write a structured summary paragraph in the following format:
+
+[Timestamp]: [Summary of vehicle types, quantities, characteristics, actions, pedestrian activity, and traffic anomalies].
+
+**Important Constraints:**
+- Do not include assumptions or details not clearly visible in the footage.
+- Do not speculate about the intentions or emotions of drivers or pedestrians; only describe observable actions and postures.
+- Use neutral descriptions such as “the footage shows” or “the camera captures”; avoid subjective phrasing like “we see” or “the viewer can observe.”
+- If vehicle type identification is uncertain, state this clearly.
+- The final output should be a concise, fact-based summary of the traffic activity and scene context. The length should be appropriate to the events observed (prioritizing clarity and completeness over word count).
+"""
+
+PROMPTS["summarize_description_wildlife"] = """
+You have been provided with a series of chronological descriptions, each detailing a consecutive segment of wildlife camera footage in a natural environment. These descriptions were generated from individual video clips, and each follows the format:
+
+[Timestamp]: [Environment description][Summary of animal and their activities]
+
+Your task is to act as a **Description Synthesizer and Summarizer**. Your goal is to **merge and consolidate** these multiple descriptions into a single, coherent summary that covers the entire duration of the input segments.
+
+Focus on the following objectives:
+1.  **Consolidate Environment:** Synthesize the environmental descriptions from all input segments into a single summary, noting any changes that occurred during the period (e.g., shifts in lighting, weather). Avoid repeating static elements unnecessarily.
+2.  **Consolidate Animal Activity:** Combine all observed animal sightings and behaviors from all input segments into a single, chronologically ordered summary of activity. **Crucially, retain *all* unique information and distinct observations regarding species, number, appearance, and behavior mentioned in *any* of the input descriptions.**
+3.  **Eliminate Redundancy:** Remove repetitive phrasing or descriptions of prolonged periods with no change or activity, while ensuring all unique events are captured in the consolidated summary.
+4.  **Maintain Chronology:** Ensure the consolidated summary of animal activity flows logically according to the sequence of events across the entire merged timeframe, using timestamps (or relative timing inferred from timestamps) to denote key moments if necessary within the activity summary.
+
+Constraints:
+-   Output **a single consolidated description block** following the exact format specified below.
+-   Do not introduce information not present in the input descriptions.
+-   Do not speculate or infer.
+-   Focus the summary on the progression of dynamic events, especially wildlife activity and environmental changes.
+-   Ensure *every* distinct observation from the input is represented in the final consolidated summary.
+-   The content within the output fields should be a concise, fact-based summary, aiming for a total length within the consolidated fields of approximately 400 words.
+
+Input: {inputs}
+
+Output Format:
+The final output should be a concise, fact-based summary of the wildlife activity and environmental context with the following format:
+[Timestamp]: [Consolidated Environment Description][Consolidated Summary of Animals and Activities]
+"""
+
+PROMPTS["summarize_description_traffic"] = """
+You have been provided with a series of chronological descriptions, each detailing a consecutive segment of traffic camera footage from a fixed position. These descriptions were generated from individual video clips, and each follows the format:
+
+[Timestamp]: [Summary of vehicle types, quantities, characteristics, actions, pedestrian activity, and traffic anomalies].
+
+Your task is to act as a **Description Synthesizer and Summarizer** for traffic footage. Your goal is to **merge and consolidate** these multiple descriptions into a single, coherent summary that covers the entire duration of the input segments.
+
+Focus on the following objectives:
+1.  **Consolidate Traffic Elements:** Combine all observed traffic elements (vehicle types, quantities, characteristics, actions, pedestrian activity, traffic anomalies) from all input segments into a single, chronologically ordered summary of activity. **Crucially, retain *all* unique information and distinct observations mentioned in *any* of the input descriptions.**
+2.  **Eliminate Redundancy:** Remove repetitive phrasing or descriptions of prolonged periods with no change or activity, while ensuring all unique events and states are captured in the consolidated summary.
+3.  **Maintain Chronology:** Ensure the consolidated summary of traffic activity flows logically according to the sequence of events across the entire merged timeframe, using timestamps (or relative timing inferred from timestamps) to denote key moments if necessary within the activity summary.
+
+Constraints:
+-   Output **a single consolidated description block** following the exact format specified below.
+-   Do not introduce information not present in the input descriptions.
+-   Do not speculate or infer.
+-   Focus the summary on the progression of dynamic events, especially traffic activity and anomalies.
+-   Ensure *every* distinct observation from the input is represented in the final consolidated summary.
+-   The content within the output fields should be a concise, fact-based summary, with length appropriate to the events observed.
+
+Input: {inputs}
+
+Output Format:
+The final output should be a concise, fact-based summary of the traffic activity with the following format:
+[Timestamp]: [Consolidated Summary of Traffic Elements (vehicle types, quantities, characteristics, actions, pedestrian activity, traffic anomalies)].
+"""

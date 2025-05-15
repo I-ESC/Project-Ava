@@ -3,7 +3,7 @@ from llms.BaseModel import BaseLanguageModel
 from lmdeploy import pipeline, TurbomindEngineConfig, GenerationConfig
 
 class QwenLM(BaseLanguageModel):
-    def __init__(self, model_type="Qwen/Qwen2.5-14B-Instruct-AWQ", tp=4):
+    def __init__(self, model_type="Qwen/Qwen2.5-14B-Instruct-AWQ", tp=1):
         """
         Initialize the QwenLM model.
 

@@ -6,7 +6,7 @@ from lmdeploy.vl.constants import IMAGE_TOKEN
 from lmdeploy.vl.utils import encode_image_base64
 
 class QwenVL(BaseVideoModel):
-    def __init__(self, model_type="Qwen/Qwen2.5-VL-7B-Instruct-AWQ", tp=4):
+    def __init__(self, model_type="Qwen/Qwen2.5-VL-7B-Instruct-AWQ", tp=1):
         """
         Initialize the QwenVL model.
 

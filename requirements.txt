@@ -1,0 +1,8 @@
+LMDeploy
+opencv-python
+bert_score
+coloredlogs
+json_repair
+qwen-vl-utils
+scikit-learn
+timm

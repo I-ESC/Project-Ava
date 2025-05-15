@@ -3,7 +3,6 @@ import os
 import json
 import time
 from typing import Union
-from matplotlib import pyplot as plt
 from llms.BaseModel import BaseLanguageModel, BaseVideoModel
 from video_utils import VideoRepresentation
 from .prompt import PROMPTS

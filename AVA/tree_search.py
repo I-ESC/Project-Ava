@@ -183,6 +183,7 @@ class EventList:
         
         formatted_information = ""
         sorted_datas = sorted(candidate_datas, key=lambda x: x["event_data"][0]["duration"][0])
+        sorted_durations = []
         
         for event_chunk in sorted_datas:
             description = ""
@@ -197,7 +198,9 @@ class EventList:
                 event_chunk["event_data"][-1]["duration"][1],
                 description
             )
-        return formatted_information
+            
+            sorted_durations.append([event_chunk["event_data"][0]["duration"][0], event_chunk["event_data"][-1]["duration"][1]])
+        return formatted_information, sorted_durations
 
     def structed_information(self):
         return self.datas
@@ -283,7 +286,7 @@ class Node:
 
     def _re_query(self):
         print("Re-query")
-        retrieved_information = self.event_list.format_information()
+        retrieved_information, _ = self.event_list.format_information()
         query_prompt = PROMPTS["re-query"].format(
             video_segments=retrieved_information,
             user_query=self.queries[0]
@@ -333,7 +336,8 @@ class Node:
 
     def _prepare_summary_and_answer_input(self):
         print("Prepare summary and answer input")
-        retrieved_information = self.event_list.format_information(limited_ratio=0.75)
+        retrieved_information, retrieved_durations = self.event_list.format_information(limited_ratio=0.75)
+        
         summary_prompt = PROMPTS["summary_and_answer_COT"].format(
             video_segments=retrieved_information,
             user_query=self.queries[0]
@@ -343,6 +347,7 @@ class Node:
 
         inference_input = {"text": summary_prompt}
         self.inference_input = inference_input
+        self.retrieved_durations = retrieved_durations
         return inference_input
 
 class TreeSearch:
@@ -423,6 +428,7 @@ class TreeSearch:
                     "depth": depth,
                     "path": path,
                     "input_prompt": node.input_prompt,
+                    "frame_durations": node.retrieved_durations,
                     "structed_information": node.event_list.datas,
                 })
             for child in node.children:

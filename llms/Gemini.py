@@ -1,8 +1,6 @@
 import base64
 import io
 import asyncio
-import random
-import itertools
 from PIL import Image
 from openai import OpenAI
 from llms.BaseModel import BaseVideoModel, BaseLanguageModel

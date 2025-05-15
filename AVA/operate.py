@@ -2,6 +2,7 @@ import time
 import os
 import json
 import re
+import numpy as np
 from json_repair import repair_json
 from typing import Union
 from embeddings.BaseEmbeddingModel import BaseEmbeddingModel
@@ -10,6 +11,7 @@ from .base import (
     BaseGraphStorage,
     BaseVectorStorage,
 )
+from .prompt import PROMPTS
 from .events import extract_events
 from .entities import extract_entities_and_relations
 from .tree_search import TreeSearch
@@ -56,7 +58,7 @@ def extract_knowledge_graph(
             "id": event["id"],
             "description": event["description"],
             "duration": event["duration"],
-            "content": event["description"]
+            "content": [event["description"]]
         } for event in events
     }
     
@@ -84,7 +86,7 @@ def extract_knowledge_graph(
             "entity1": relation["entity1"],
             "entity2": relation["entity2"],
             "description": relation["description"],
-            "content": relation["description"]
+            "content": [relation["description"]]
         } for relation in relations
     }
     
@@ -186,7 +188,7 @@ def tree_search(
     tree_information = tree_search.collect_tree_information()
     return tree_information
 
-def generate_self_consistency_result(
+def generate_sa_self_consistency_result(
     tree_information: dict,
     llm: BaseLanguageModel,
     self_consistency_num: int = 8,
@@ -275,22 +277,165 @@ def choose_best_sa_answer(
     score_results: list,
     alpha: float = 0.3,
 ):
-    node_best_choices = []
     for score_result in score_results:
         scores = {
             choice: score_result["scores"][choice][0] * alpha + score_result["scores"][choice][1] * (1 - alpha)
-            for choice in score_result["scores"].keys()
+            for choice in score_result["scores"]
         }
         best_choice = max(scores, key=scores.get)
         best_score = scores[best_choice]
-        node_best_choices.append((best_choice, best_score))
+        score_result["final_score"] = {best_choice: best_score}
+
+    sorted_score_results = sorted(
+        score_results,
+        key=lambda x: list(x["final_score"].values())[0],
+        reverse=True
+    )
+
+    return sorted_score_results
+
+def generate_ca_self_consistency_result(
+    query: str,
+    sorted_sa_nodes: list,
+    llm: BaseLanguageModel,
+    video: VideoRepresentation,
+    self_consistency_num: int = 4,
+    max_frames: int = 256,
+    max_retries: int = 3,
+):
+    candidate_nodes = []
+    for sa_node in sorted_sa_nodes:
+        if len(candidate_nodes) == 2:
+            break
+        
+        if not candidate_nodes:
+            candidate_nodes.append(sa_node)
+        else:
+            if list(sa_node["final_score"].keys())[0] != list(candidate_nodes[0]["final_score"].keys())[0]:
+                candidate_nodes.append(sa_node)
     
-    tree_best_choice = max(node_best_choices, key=lambda x: x[1])
-    return tree_best_choice[0]
+    for candidate_node in candidate_nodes:
+        frame_durations = candidate_node["frame_durations"]
+        
+        frames = []
+        for frame_duration in frame_durations:
+            sampled_frames, _, _ = video.get_frames_by_fps(fps=1, duration=frame_duration)
+            frames.extend(sampled_frames)
+        
+        if len(frames) > max_frames:
+            downsampled_indices = np.linspace(0, len(frames)-1, max_frames, dtype=int)
+            frames = [frames[i] for i in downsampled_indices]
+        
+        text_prompt = PROMPTS["checkframe_and_answer_COT"].format(
+            user_query=query
+        )
+        
+        batch_input_prompts = []
+        for _ in range(self_consistency_num):
+            batch_input_prompts.append(
+                {
+                    "text": text_prompt,
+                    "frames": frames
+                }
+            )
+            
+        for _ in range(max_retries):
+            try:
+                all_responses = llm.batch_generate_response(batch_input_prompts)
+                break
+            except Exception as e:
+                print(e)
+                continue
+        
+        candidate_node["responses"] = all_responses
+        
+    cleaned_candidate_nodes = [
+        {
+            "action": "CA",
+            "depth": candidate_node["depth"],
+            "path": candidate_node["path"],
+            "responses": candidate_node["responses"]
+        } for candidate_node in candidate_nodes
+    ]
     
+    return cleaned_candidate_nodes
+
+def calculate_ca_score(
+    node_results: list,
+):
+    scorer = BERTScorer(model_type="microsoft/deberta-xlarge-mnli", lang="en")
     
+    for node_result in node_results:
+        responses = node_result["responses"]
+        answer_counts = {"A": 0, "B": 0, "C": 0, "D": 0}
+        thoughts_counts = {"A": [], "B": [], "C": [], "D": []}
+        node_score = {"A": [0.0, 0.0], "B": [0.0, 0.0], "C": [0.0, 0.0], "D": [0.0, 0.0]}
+        
+        def extract_json(llm_output):
+            json_pattern = r'{.*}'
+            match = re.search(json_pattern, llm_output, re.DOTALL)
+            if match:
+                json_str = match.group(0)
+                try:
+                    parsed_json = json.loads(json_str)
+                    return parsed_json
+                except json.JSONDecodeError as e:
+                    return f"JSON parse error: {e}"
+            else:
+                return None
             
+        for response in responses:
+            json_result = extract_json(response)
+            if isinstance(json_result, dict) and "Answer" in json_result.keys() and "Analysis" in json_result.keys():
+                answer = json_result["Answer"]
+                thoughts = json_result["Analysis"]
+                if answer in answer_counts.keys():
+                    answer_counts[answer] += 1
+                    thoughts_counts[answer].append(thoughts)
+        
+        self_consistency_num = len(responses)
+        
+        for choice in answer_counts.keys():
+            node_score[choice][0] = 1.0 * answer_counts[choice] / self_consistency_num
             
-            
+        for choice in answer_counts.keys():
+            if len(thoughts_counts[choice]) > 1:
+                text1 = []
+                text2 = []
+                f1_scores = []
+                for i in range(len(thoughts_counts[choice])):
+                    for j in range(len(thoughts_counts[choice])):
+                        if i != j:
+                            text1.append(thoughts_counts[choice][i])
+                            text2.append(thoughts_counts[choice][j])
+                    f1,_, _ = scorer.score(text1, text2)
+                    f1 = f1.mean().item()
+                    f1_scores.append(f1)
+                node_score[choice][1] = 1.0 * sum(f1_scores) / len(f1_scores)
+        
+        node_result["scores"] = node_score
+    
+    return node_results
+
+def choose_best_ca_answer(
+    score_results: list,
+    alpha: float = 0.3,
+):
+    for score_result in score_results:
+        scores = {
+            choice: score_result["scores"][choice][0] * alpha + score_result["scores"][choice][1] * (1 - alpha)
+            for choice in score_result["scores"]
+        }
+        best_choice = max(scores, key=scores.get)
+        best_score = scores[best_choice]
+        score_result["final_score"] = {best_choice: best_score}
+    
+    sorted_score_results = sorted(
+        score_results,
+        key=lambda x: list(x["final_score"].values())[0],
+        reverse=True
+    )
+    
+    return sorted_score_results
                     
             

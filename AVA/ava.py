@@ -1,9 +1,12 @@
 from .operate import (
     extract_knowledge_graph,
     tree_search,
-    generate_self_consistency_result,
+    generate_sa_self_consistency_result,
     calculate_sa_score,
     choose_best_sa_answer,
+    generate_ca_self_consistency_result,
+    calculate_ca_score,
+    choose_best_ca_answer,
 )
 
 from .storage import (
@@ -137,7 +140,7 @@ class AVA:
         construct from the video directory
         """
         try:
-            logger.info(f"Constructing VideoRAG from video directory: {self.working_dir}")
+            logger.info(f"Constructing Graph with working directory: {self.working_dir}")
             
             self.kg = extract_knowledge_graph(
                 llm=self.llm_model,
@@ -191,18 +194,19 @@ class AVA:
         with open(tree_information_file, "r") as f:
             tree_information = json.load(f)
             
-        if os.path.exists(os.path.join(question_folder, f"{question_id}", "self_consistency_result.json")):
-            with open(os.path.join(question_folder, f"{question_id}", "self_consistency_result.json"), "r") as f:
+        # generate self-consistency result
+        if os.path.exists(os.path.join(question_folder, f"{question_id}", "SA_self_consistency_result.json")):
+            with open(os.path.join(question_folder, f"{question_id}", "SA_self_consistency_result.json"), "r") as f:
                 cleaned_self_consistency_results = json.load(f)
         else:
-            self_consistency_result = generate_self_consistency_result(tree_information, self.llm_model)
+            self_consistency_result = generate_sa_self_consistency_result(tree_information, self.llm_model)
             cleaned_self_consistency_results = [
                 {k: v for k, v in item.items() if k not in {"structed_information", "input_prompt"}}
                 for item in self_consistency_result
             ]
         
             # save self-consistency result
-            with open(os.path.join(question_folder, f"{question_id}", "self_consistency_result.json"), "w") as f:
+            with open(os.path.join(question_folder, f"{question_id}", "SA_self_consistency_result.json"), "w") as f:
                 json.dump(cleaned_self_consistency_results, f, indent=4)
         
         # calculate sa nodes scores
@@ -214,10 +218,63 @@ class AVA:
         ]
         
         # save score results
-        with open(os.path.join(question_folder, f"{question_id}", "score_result.json"), "w") as f:
+        with open(os.path.join(question_folder, f"{question_id}", "SA_score_result.json"), "w") as f:
             json.dump(cleaned_score_results, f, indent=4)
         
-        final_sa_answer = choose_best_sa_answer(cleaned_score_results)
+        sorted_score_results = choose_best_sa_answer(cleaned_score_results)
+        
+        with open(os.path.join(question_folder, f"{question_id}", "sorted_SA_score_result.json"), "w") as f:
+            json.dump(sorted_score_results, f, indent=4)
+            
+        final_sa_answer = list(sorted_score_results[0]["final_score"].keys())[0]
 
         return final_sa_answer
+    
+    def generate_CA_answer(self, query: str, question_id: int):
+        question_folder = os.path.join(self.video.work_dir, "questions")
+        SA_score_result_file = os.path.join(question_folder, f"{question_id}", "sorted_SA_score_result.json")
+        assert os.path.exists(SA_score_result_file), "SA score result file does not exist, please generate SA answer first!"
+        
+        with open(SA_score_result_file, "r") as f:
+            SA_score_result = json.load(f)
+        
+        # generate self-consistency result
+        if os.path.exists(os.path.join(question_folder, f"{question_id}", "CA_self_consistency_result.json")):
+            with open(os.path.join(question_folder, f"{question_id}", "CA_self_consistency_result.json"), "r") as f:
+                ca_self_consistency_result = json.load(f)
+        else:
+            ca_self_consistency_result = generate_ca_self_consistency_result(
+                query=query,
+                sorted_sa_nodes=SA_score_result,
+                llm=self.llm_model,
+                video=self.video,
+                self_consistency_num=4,
+                max_frames=256,
+                max_retries=3,
+            )
+            
+            # save ca self-consistency result
+            with open(os.path.join(question_folder, f"{question_id}", "CA_self_consistency_result.json"), "w") as f:
+                json.dump(ca_self_consistency_result, f, indent=4)
+            
+        # calculate ca nodes scores
+        score_results = calculate_ca_score(ca_self_consistency_result)
+        
+        cleaned_score_results = [
+            {k: v for k, v in item.items() if k not in {"responses"}}
+            for item in score_results
+        ]
+        
+        # save score results
+        with open(os.path.join(question_folder, f"{question_id}", "CA_score_result.json"), "w") as f:
+            json.dump(cleaned_score_results, f, indent=4)
+            
+        sorted_score_results = choose_best_ca_answer(cleaned_score_results)
+        
+        with open(os.path.join(question_folder, f"{question_id}", "sorted_CA_score_result.json"), "w") as f:
+            json.dump(sorted_score_results, f, indent=4)
+            
+        final_ca_answer = list(sorted_score_results[0]["final_score"].keys())[0]
+        
+        return final_ca_answer
         

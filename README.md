@@ -30,7 +30,7 @@ cd datas/[dataset-name]
 
 # For AVA-100
 mkdir videos
-# Then download the video from Google Drive and place it in the videos folder.
+# Then download the videos from Google Drive and place them in the videos folder.
 ```
 
 ---
@@ -56,7 +56,7 @@ python query_SA.py --model qwenlm --dataset lvbench --video_id 1 --question_id 0
 ## Generate CA Result
 ```bash
 # Before generating the CA Result, the corresponding SA Result must have already been produced.
-python query_SA.py --model [name_of_model] --dataset [name_of_dataset] --video_id [id_of_video] --question_id [id_of_question]--gpus [num_of_gpus]
+python query_CA.py --model [name_of_model] --dataset [name_of_dataset] --video_id [id_of_video] --question_id [id_of_question]--gpus [num_of_gpus]
 
 # example
 python query_CA.py --model qwenvl --dataset lvbench --video_id 1 --question_id 0 --gpus 1

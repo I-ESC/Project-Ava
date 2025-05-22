@@ -9,6 +9,27 @@ An implementation of Paper "Empowering Agentic Video Analytics Systems with Vide
 - **Proposed benchmark**: Proposes AVA-100, an ultra-long video benchmark designed to evaluate video analysis capabilities, comprising 8 videos (each over 10 hours) and 120 manually annotated questions across four scenarios: human daily activities, city walking, wildlife surveillance, and traffic monitoring.
 - AVA achieves $62.3\%$ on LVBench, $62.3\%$ on VideoMME-Long, and $75.8\%$ on the proposed AVA-100 benchmark, outperforming mainstream VLMs and Video-RAG methods under the same settings.
 
+![Overall performance](./arts/results.jpg)
+
+---
+## 📹 AVA-100
+Avas-100 is proposed by us, which is an ultra-long video
+benchmark specially designed to evaluate video analysis
+capabilities Avas-100 consists of 8 videos, each exceeding
+10 hours in length, and includes a total of 120 manually
+annotated questions. The benchmark covers four typical
+video analytics scenarios: human daily activities, city walking, wildlife surveillance, and traffic monitoring, each scenario contains two videos.  All questions are carefully
+designed by human annotators, who also provide reference
+answers as the ground truth. In addition, GPT-4o is utilized
+to generate plausible distractor options.
+- **Human daily activities**: Selected and stitched from egocentric footage in the [Ego4D](https://ego4d-data.org/).
+- **City walking**: Selected from publicly available YouTube videos, capturing urban exploration.
+- **Wildlife surveillance**: Selected from publicly available YouTube videos, capturing animal monitoring.
+- **Traffic monitoring**: Selected and stitched from monitoring videos in the [Bellevue Traffic Video Dataset](https://github.com/City-of-Bellevue/TrafficVideoDataset)
+
+![AVA-100 real case](./arts/ava100.jpg)
+
+
 ---
 ## 📦 Installation
 ```bash
@@ -45,7 +66,7 @@ python graph_construction.py --model [name_of_model] --dataset [name_of_dataset]
 python graph_construction.py --model qwenvl --dataset lvbench --video_id 1 --gpus 1
 ```
 
-## Generate SA Result
+## Generate Summary_and_Answer Result
 ```bash
 # View datas/[dataset_name]/[dataset_name.json] for question_id
 python query_SA.py --model [name_of_model] --dataset [name_of_dataset] --video_id [id_of_video] --question_id [id_of_question]--gpus [num_of_gpus]
@@ -53,7 +74,7 @@ python query_SA.py --model [name_of_model] --dataset [name_of_dataset] --video_i
 # example
 python query_SA.py --model qwenlm --dataset lvbench --video_id 1 --question_id 0 --gpus 1
 ```
-## Generate CA Result
+## Generate Check_raw_frame_and_Answer Result
 ```bash
 # Before generating the CA Result, the corresponding SA Result must have already been produced.
 python query_CA.py --model [name_of_model] --dataset [name_of_dataset] --video_id [id_of_video] --question_id [id_of_question]--gpus [num_of_gpus]
@@ -61,13 +82,6 @@ python query_CA.py --model [name_of_model] --dataset [name_of_dataset] --video_i
 # example
 python query_CA.py --model qwenvl --dataset lvbench --video_id 1 --question_id 0 --gpus 1
 ```
-
-## ❤️ Acknowledgements
-AVA is implemented with reference to the following projects：
-
-[LightRAG](https://github.com/HKUDS/LightRAG)
-
-[VideoRAG](https://github.com/HKUDS/VideoRAG)
 
 
 ## 📄 Citation

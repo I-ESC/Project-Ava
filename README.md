@@ -13,7 +13,7 @@ An implementation of Paper "Empowering Agentic Video Analytics Systems with Vide
 
 ---
 ## 📹 AVA-100
-Avas-100 is proposed by us, which is an ultra-long video
+AVA-100 is proposed by us, which is an ultra-long video
 benchmark specially designed to evaluate video analysis
 capabilities Avas-100 consists of 8 videos, each exceeding
 10 hours in length, and includes a total of 120 manually
@@ -25,7 +25,7 @@ to generate plausible distractor options.
 - **Human daily activities**: Selected and stitched from egocentric footage in the [Ego4D](https://ego4d-data.org/).
 - **City walking**: Selected from publicly available YouTube videos, capturing urban exploration.
 - **Wildlife surveillance**: Selected from publicly available YouTube videos, capturing animal monitoring.
-- **Traffic monitoring**: Selected and stitched from monitoring videos in the [Bellevue Traffic Video Dataset](https://github.com/City-of-Bellevue/TrafficVideoDataset)
+- **Traffic monitoring**: Selected and stitched from monitoring videos in the [Bellevue Traffic Video Dataset](https://github.com/City-of-Bellevue/TrafficVideoDataset).
 
 ![AVA-100 real case](./arts/ava100.jpg)
 

@@ -297,7 +297,7 @@ def choose_best_sa_answer(
 def generate_ca_self_consistency_result(
     query: str,
     sorted_sa_nodes: list,
-    llm: BaseLanguageModel,
+    llm: BaseVideoModel,
     video: VideoRepresentation,
     self_consistency_num: int = 4,
     max_frames: int = 256,
@@ -335,7 +335,7 @@ def generate_ca_self_consistency_result(
             batch_input_prompts.append(
                 {
                     "text": text_prompt,
-                    "frames": frames
+                    "video": frames
                 }
             )
             

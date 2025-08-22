@@ -12,7 +12,7 @@ class QwenLM(BaseLanguageModel):
             tp (int): The number of GPUs to use.
         """
         self.pipe = pipeline(model_type, 
-                backend_config=TurbomindEngineConfig(session_len=8192*4, tp=tp, cache_max_entry_count=0.5))
+                backend_config=TurbomindEngineConfig(session_len=8192*4, tp=tp, cache_max_entry_count=0.3))
     
     def generate_response(self, inputs, max_new_tokens=512, temperature=0.5):
         """

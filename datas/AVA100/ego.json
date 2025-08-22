@@ -1,0 +1,546 @@
+[
+    {
+        "video_id": 1,
+        "video_key": "ego1",
+        "qa":[
+            {
+                "question_id": 0,
+                "query": "What event immediately follows the camera wearer turning on the stove?",
+                "options": [
+                "A. Spreading oil in a frying pan", 
+                "B. Washing hands after handling food", 
+                "C. Toasting bread in the frying pan", 
+                "D. Placing the toasted bread on a plate"],
+                "answer": "A",
+                "time_reference" : "36:00-36:40",
+                "sub_video":  "04ac4c40-22fd-42aa-a7f0-ee597ffb7058"
+            },
+            {
+                "question_id": 1,
+                "query": "What is the time shows by the phone when the camera wearer checking the phone and picking up a wiping cloth?",
+                "options": [
+                    "A. 9:41",
+                    "B. 9:21",
+                    "C. 8:21",
+                    "D. 8:41"
+                ],
+                "answer": "C",
+                "time_reference" : "48:40-48:48",
+                "sub_video":  "04ac4c40-22fd-42aa-a7f0-ee597ffb7058"
+            },
+            {
+                "question_id": 2,
+                "query": "From the camera wearer’s perspective, where is the fridge located in relation to the cooker in the first kitchen?",
+                "options": [
+                    "A. The fridge is located to the right of the cooker",
+                    "B. The fridge is located to the left of the cooker",
+                    "C. The fridge is located behind the cooker",
+                    "D. The fridge is located on the adjacent wall facing the cooker"
+                ],
+                "answer": "A",
+                "time_reference" : "36:00",
+                "sub_video":  "04ac4c40-22fd-42aa-a7f0-ee597ffb7058"
+            },
+            {
+                "question_id": 3,
+                "query": "What did the camera wearer spread on the sofa before sitting down?",
+                "options": [
+                    "A. A yellow towel",
+                    "B. A blue blanket",
+                    "C. A red and white patterned cloth",
+                    "D. A white pillow"
+                ],
+                "answer": "C",
+                "time_reference" : "1:47:45",
+                "sub_video":  "ec344610-74f4-4765-9c3f-0837ef78055d"
+            },
+            {
+                "question_id": 4,
+                "query": "Where is the test tube rack placed in relation to the sanitizer spray bottle in the laboratory?",
+                "options": [
+                    "A. The test tube rack is placed on the right side of the sanitizer spray bottle on the lab bench.",
+                    "B. The test tube rack is placed in a storage closet separate from the sanitizer spray bottle",
+                    "C. The test tube rack is placed on the opposite side of the bench from the sanitizer spray bottle",
+                    "D. The test tube rack is placed in a storage closet separate from the sanitizer spray bottle"
+                ],
+                "answer": "A",
+                "time_reference" : "2:57:23",
+                "sub_video":  "ffbccef7-5084-42ef-9ca8-68faf94b42c7"
+            },
+            {
+                "question_id": 5,
+                "query": "What is the correct order of the trash bins in the laboratory from left to right?",
+                "options": [
+                    "A. Green, Red, Black",
+                    "B. Red, Green, Black",
+                    "C. Black, Red, Green",
+                    "D. Black, Green, Red"
+                ],
+                "answer": "D",
+                "time_reference" : "3:06:00",
+                "sub_video":  "ffbccef7-5084-42ef-9ca8-68faf94b42c7"
+            },
+            {
+                "question_id": 6,
+                "query": "What color was the sanitizer bottle the camera wearer used in the laboratory?",
+                "options": [
+                    "A. Green",
+                    "B. Blue",
+                    "C. Red",
+                    "D. Clear"
+                ],
+                "answer": "D",
+                "time_reference" : "3:12:00",
+                "sub_video":  "ffbccef7-5084-42ef-9ca8-68faf94b42c7"
+            },
+            {
+                "question_id": 7,
+                "query": "What activity did the camera wearer perform after turning on the burner?",
+                "options": [
+                    "A. Started recording experiment results in a notebook",
+                    "B. Disinfected their hands and the laboratory equipment",
+                    "C. Prepared a new set of test tubes for the next experiment",
+                    "D. Repeatedly adjusting the burner flame"
+                ],
+                "answer": "D",
+                "time_reference" : "3:10:30",
+                "sub_video":  "ffbccef7-5084-42ef-9ca8-68faf94b42c7"
+            },
+            {
+                "question_id": 8,
+                "query": "What brand is the bike that the camera wearer is repairing?",
+                "options": [
+                    "A. Cannondale",
+                    "B. Triestina",
+                    "C. Trek",
+                    "D. Specialized"
+                ],
+                "answer": "B",
+                "time_reference" : "4:44:24",
+                "sub_video":  "0919b674-ec6a-431d-8eec-12781b6d5775"
+            },
+            {
+                "question_id": 9,
+                "query": "What did the camera wearer do the first time they left the room where the bike was being repaired?",
+                "options": [
+                    "A. Took a small bottle with parts in it",
+                    "B. Picked up a bike tire",
+                    "C. Took a phone call",
+                    "D. Took a rest"
+                ],
+                "answer": "A",
+                "time_reference" : "4:49:15-4:50:00",
+                "sub_video":  "0919b674-ec6a-431d-8eec-12781b6d5775"
+            },
+            {
+                "question_id": 10,
+                "query": "Where did the camera wearer store the wrench tool?",
+                "options": [
+                    "A. In a hanging tool organizer",
+                    "B. In the red square drawer",
+                    "C. On the top of the workbench",
+                    "D. Dropped on the floor"
+                ],
+                "answer": "B",
+                "time_reference" : "4:53:40",
+                "sub_video":  "0919b674-ec6a-431d-8eec-12781b6d5775"
+            },
+            {
+                "question_id": 11,
+                "query": "How many potatoes were on the counter when the camera wearer was peeling them in the kitchen?",
+                "options": [
+                    "A. 1",
+                    "B. 2",
+                    "C. 3",
+                    "D. 4"
+                ],
+                "answer": "C",
+                "time_reference" : "6:41:50",
+                "sub_video":  "c5851c24-4ae3-4430-b867-f43800f0f56e"
+            },
+            {
+                "question_id": 12,
+                "query": "What did the camera wearer feed to the man sitting at the desk in front of a computer?",
+                "options": [
+                    "A. A slice of cake",
+                    "B. A piece of chocolate",
+                    "C. Splitted fruit",
+                    "D. Nuts"
+                ],
+                "answer": "C",
+                "time_reference" : "7:02:28",
+                "sub_video":  "c5851c24-4ae3-4430-b867-f43800f0f56e"
+            },
+            {
+                "question_id": 13,
+                "query": "What was the camera wearer doing while managing the baby stroller during the walk?",
+                "options": [
+                    "A. Listening to music",
+                    "B. Talking to someone through earphones",
+                    "C. Using a voice-guided navigation app",
+                    "D. Taking photos of the scenery"
+                ],
+                "answer": "A",
+                "time_reference" : "7:50:35",
+                "sub_video":  "d7dcdd72-3dee-4804-8374-98960b07301e"
+            },
+            {
+                "question_id": 14,
+                "query": "After the camera wearer manages the dog and the baby stroller upon returning home, _________ happens before she washes her hands.",
+                "options": [
+                    "A. Puts the baby stroller away in a closet",
+                    "B. Removes the dog's collar, and hangs up the leash and collar.",
+                    "C. Changes the baby's diaper",
+                    "D. Takes off her shoes and places them on a rack"
+                ],
+                "answer": "B",
+                "time_reference" : "8:37:19",
+                "sub_video":  "d7dcdd72-3dee-4804-8374-98960b07301e"
+            },
+            {
+                "question_id": 15,
+                "query": "Where does the camera wearer ultimately place the baby stroller?",
+                "options": [
+                    "A. Out of home",
+                    "B. In the living room",
+                    "C. In the kitchen",
+                    "D. In the garage"
+                ],
+                "answer": "D",
+                "time_reference" : "8:42:07",
+                "sub_video":  "d7dcdd72-3dee-4804-8374-98960b07301e"
+            },
+            {
+                "question_id": 16,
+                "query": "Why did the child move the stepstool near the kitchen countertop?",
+                "options": [
+                    "A. The child moved the stepstool near the kitchen countertop to reach it and help with preparing dough because she is not tall enough.",
+                    "The child moved the stepstool near the kitchen countertop to reach the sink over it and wash her hands because she is not tall enough.",
+                    "The child moved the stepstool near the kitchen countertop to access the top drawer above it and find the measuring spoons because she is not tall enough.",
+                    "The child moved the stepstool near the kitchen countertop to access it and retrieve the cookie jar because she is not tall enough."
+                ],
+                "answer": "A",
+                "time_reference" : "9:12:00-9:24:00",
+                "sub_video":  "0b703793-134a-4889-bc40-c19328d8f7cd"
+            },
+            {
+                "question_id": 17,
+                "query": "Where is the piano located in the camera wearer’s house?",
+                "options": [
+                    "A. In the living room, next to the sofa",
+                    "B. A. In a small room, opposite a desk.",
+                    "C. In the dining room, next to the window",
+                    "D. In the bedroom, next to the bed"
+                ],
+                "answer": "B",
+                "time_reference" : "9:27:42",
+                "sub_video":  "0b703793-134a-4889-bc40-c19328d8f7cd"
+            },
+            {
+                "question_id": 18,
+                "query": "What did the camera wearer do after playing the piano?",
+                "options": [
+                    "A. Went to the kitchen to make a drink.",
+                    "B. Sit and opened the laptop to do something.",
+                    "C. Picked up a book and started reading.",
+                    "D. Washing dishes"
+                ],
+                "answer": "B",
+                "time_reference" : "10:14:00",
+                "sub_video":  "0b703793-134a-4889-bc40-c19328d8f7cd"
+            },
+            {
+                "question_id": 19,
+                "query": "What did the camera wearer use to measure dimensions while doing carpentry?",
+                "options": [
+                    "A. Ruler",
+                    "B. Protractor",
+                    "C. Tape measure",
+                    "D. Vernier caliper"
+                ],
+                "answer": "C",
+                "time_reference" : "10:27:15",
+                "sub_video":  "7f09822a-87b9-4eac-bb34-3f1059c704d1"
+            },
+            {
+                "question_id": 20,
+                "query": "What tool did the camera wearer use to mark lumber before cutting it in the segment where a circular hand saw was also used?",
+                "options": [
+                    "A. Pencil",
+                    "B. Chalk",
+                    "C. Marker",
+                    "D. Pen"
+                ],
+                "answer": "C",
+                "time_reference" : "10:38:31",
+                "sub_video":  "7f09822a-87b9-4eac-bb34-3f1059c704d1"
+            },
+            {
+                "question_id": 21,
+                "query": "After the camera wearer joins a group of people in dance, _________ happens before she raises her legs.",
+                "options": [
+                    "A. Interacting with a jacket and the backpack",
+                    "B. High fiving a woman",
+                    "C. Operating a watch, adjusting the camera, stretching arms, and touching knees",
+                    "D. Adjusting her clothing and touching her face"
+                ],
+                "answer": "C",
+                "time_reference": "11:36:23-11:36:34",
+                "sub_video":  "7f09822a-87b9-4eac-bb34-3f1059c704d1"
+            }
+        ]
+    },
+    {
+     "video_id": "2",
+     "video_key": "ego2",
+     "qa": [
+        {
+            "question_id": 0,
+            "query": "What tool did the camera wearer use to clean the kitchen sink area?",
+            "options": [
+                "A. Brush", 
+                "B. Paper towel", 
+                "C. Green washcloth", 
+                "D. Sponge"
+            ],
+            "answer": "C",
+            "time_reference": "0:49:20",
+            "sub_video": "07b1c874-9dc1-42bc-87ff-dffa9bef14fb"
+        },
+        {
+            "question_id": 1,
+            "query": "What colored containers did the camera wearer take ingredients from above the table?",
+            "options": [
+                "A. Red and Blue", 
+                "B. Green and Red", 
+                "C. Blue and Green", 
+                "D. Yellow and Green"
+            ],
+            "answer": "A",
+            "time_reference": "0:49:42",
+            "sub_video": "07b1c874-9dc1-42bc-87ff-dffa9bef14fb"
+        },
+        {
+            "question_id": 2,
+            "query": "What did the camera wearer use to record data on the wood at the construction site?",
+            "options": [
+                "A. Green marker",
+                "B. Black marker",
+                "C. Green pencil",
+                "D. Black pencil"
+            ],
+            "answer": "C",
+            "time_reference": "1:58:47",
+            "sub_video": "07b1c874-9dc1-42bc-87ff-dffa9bef14fb"
+        },
+        {
+            "question_id": 3,
+            "query": "What type of machine did the camera wearer use to cut wood at the construction site?",
+            "options": [
+                "A. Table Saw",
+                "B. Circular Saw",
+                "C. Band Saw",
+                "D. Table Saw"
+            ],
+            "answer": "B",
+            "time_reference": "2:09:39",
+            "sub_video": "07b1c874-9dc1-42bc-87ff-dffa9bef14fb"
+        },
+        {
+            "question_id": 4,
+            "query": "What did the camera wearer place the wall steamer on after climbing down from the ladder?",
+            "options": [
+                "A. Step Ladder",
+                "B. Bucket",
+                "C. Chair",
+                "D. Table"
+            ],
+            "answer": "B",
+            "time_reference": "2:59:23",
+            "sub_video": "0b9ee926-00f1-4b22-9e83-b664c5e465e4"
+        },
+        {
+            "question_id": 5,
+            "query": "What colors were the hats worn by the people assisting the camera wearer in handling the wallpaper?",
+            "options": [
+                "A. Red and Blue",
+                "B. Green and Red",
+                "C. Blue and Black",
+                "D. Yellow and Green"
+            ],
+            "answer": "C",
+            "time_reference": "3:22:28",
+            "sub_video": "0b9ee926-00f1-4b22-9e83-b664c5e465e4"
+        },
+        {
+            "question_id": 6,
+            "query": "While doing woodworking in the room, where did the camera wearer eventually dispose of the sawdust from the bucket?",
+            "options": [
+                "A. In a pink trash bag",
+                "B. In a blue recycling bin",
+                "C. In a green trash can",
+                "D. In a cardboard box"
+            ],
+            "answer": "A",
+            "time_reference": "3:53:00",
+            "sub_video": "a4241a5b-327e-4426-9a11-e310c81f48ce"
+        },
+        {
+            "question_id": 7,
+            "query": "In the indoor woodworking scene, why did the camera wearer lie down on the floor?",
+            "options": [
+                "A. To rest after a long period of standing",
+                "B. To measure the alignment of floor tiles",
+                "C. To search for a dropped tool under the table",
+                "D. To work on the underside of the wooden table"
+            ],
+            "answer": "D",
+            "time_reference": "4:09:45",
+            "sub_video": "a4241a5b-327e-4426-9a11-e310c81f48ce"
+        },
+        {
+            "question_id": 8,
+            "query": "Where is the egg tray forming machine located in relation to the metal rack in the factory?",
+            "options": [
+                "A. The egg tray forming machine is positioned directly behind the rack",
+                "B. The egg tray forming machine is located to the immediate left of the rack",
+                "C. The egg tray forming machine is adjacent to the right side of the rack",
+                "D. The egg tray forming machine is situated diagonally across from the rack"
+            ],
+            "answer": "B",
+            "time_reference": "6:00:26",
+            "sub_video": "baaffbad-76a7-458a-8a54-7b593ab073f6"
+        },
+        {
+            "question_id": 9,
+            "query": "What is the license plate number of the maroon-colored car seen by the camera wearer?",
+            "options": [
+                "A. TS07GM2247",
+                "B. KA05MK8821",
+                "C. MH12DT9086",
+                "D. TN22AP4319"
+            ],
+            "answer": "A",
+            "time_reference": "6:07:51",
+            "sub_video": "baaffbad-76a7-458a-8a54-7b593ab073f6"
+        },
+        {
+            "question_id": 10,
+            "query": "How many workers, including the camera wearer, are working in the egg tray manufacturing factory?",
+            "options": [
+                "A. 2",
+                "B. 3",
+                "C. 4",
+                "D. 5"
+            ],
+            "answer": "D",
+            "time_reference": "6:10:00",
+            "sub_video": "baaffbad-76a7-458a-8a54-7b593ab073f6"
+        },
+        {
+            "question_id": 11,
+            "query": "What did the camera wearer do after placing the red funnel into the blue bucket?",
+            "options": [
+                "A. Closed the lid of the blue bucket and moved it aside",
+                "B. Picked up a nearby white bucket and wiped it with a cloth",
+                "C. Took off his gloves and cleaned his hands",
+                "D. Walked away to operate a machine"
+            ],
+            "answer": "B",
+            "time_reference": "6:53:09",
+            "sub_video": "b68709fe-2a73-49c3-a468-afcf56ab234c"
+        },
+        {
+            "question_id": 12,
+            "query": "After the camera wearer measures the temperature of the cement mixture, what did he do next?",
+            "options": [
+                "A. Uses a red cup to add water to the mixture",
+                "B. Continue stirring the cement mixture.",
+                "C. Clean the bucket with a cloth",
+                "D. Organizes his tools and cleans a white bucket"
+            ],
+            "answer": "B",
+            "time_reference": "6:50:58",
+            "sub_video": "b68709fe-2a73-49c3-a468-afcf56ab234c"
+        },
+        {
+            "question_id": 13,
+            "query": "What did the camera wearer use to cover the cement mold at the end of the cement work?",
+            "options": [
+                "A. Plastic film",
+                "B. Curing blankets",
+                "C. Newspaper",
+                "D. Polyethylene film"
+            ],
+            "answer": "A",
+            "time_reference": "7:49:00",
+            "sub_video": "b68709fe-2a73-49c3-a468-afcf56ab234c"
+        },
+        {
+            "question_id": 14,
+            "query": "Where did the camera wearer place the firewood collected during the weeding?",
+            "options": [
+                "A. Inside the circular brick structure",
+                "B. In a plastic barrel beside the pathway",
+                "C. Under a wooden shed",
+                "D. Next to a compost bin"
+            ],
+            "answer": "A",
+            "time_reference": "8:27:43",
+            "sub_video": "73e6163f-5dbd-49be-a6f1-d06d0a1dca31"
+        },
+        {
+            "question_id": 15,
+            "query": "What did the camera wearer take out after returning the push lawn mower to the shed?",
+            "options": [
+                "A. Weed whacker",
+                "B. Leaf blower",
+                "C. Rake",
+                "D. Shovel"
+            ],
+            "answer": "A",
+            "time_reference": "8:39:20",
+            "sub_video": "73e6163f-5dbd-49be-a6f1-d06d0a1dca31"
+        },
+        {
+            "question_id": 16,
+            "query": "While working on the steel bridge, what was written on the sign in the camera wearer's toolbox?",
+            "options": [
+                "A. HARD HAT ZONE, V. PATEL",
+                "B. CAUTION: LIVE WIRE, A. SINGH",
+                "C. MEN ON LINE, M. SHEKAR",
+                "D. SAFETY FIRST, R. KUMAR"
+            ],
+            "answer": "C",
+            "time_reference": "9:53:25",
+            "sub_video": "05dc055d-e88a-4ab1-8474-e72b97a818b2"
+        },
+        {
+            "question_id": 17,
+            "query": "What tool did the camera wearer use to cut the red wire at the power station?",
+            "options": [
+                "A. Side Cutters",
+                "B. Wire Strippers",
+                "C. Diagonal Pliers",
+                "D. Knife"
+            ],
+            "answer": "D",
+            "time_reference": "10:12:02",
+            "sub_video": "05dc055d-e88a-4ab1-8474-e72b97a818b2"
+        },
+        {
+            "question_id": 18,
+            "query": "What was the sequence followed by the camera wearer when welding the handrail in the stairwell?",
+            "options": [
+                "A. From Bottom to Top",
+                "B. From Top to Bottom",
+                "C. From Left to Right",
+                "D. From Right to Left"
+            ],
+            "answer": "B",
+            "time_reference": "10:18:50-",
+            "sub_video": "11e56f1e-baef-4fe8-ad0f-a7ec8788ea3a"
+        }
+    ]
+}
+]

@@ -1,0 +1,194 @@
+[
+    {
+        "video_id": 1,
+        "video_key": "wildlife1",
+        "qa":[
+            {
+                "question_id": 0,
+                "query": "According to the surveillance footage, if a person appeared, if so, what is the most likely identity of this person?",
+                "options": [
+                    "A. Possibly a passerby walking a dog.",
+                    "B. Possibly a hunter in the vicinity.",
+                    "C. Possibly personnel responsible for installing or maintaining this camera.",
+                    "D. Possibly a traveler lost in the wilderness."
+                ],
+                "answer": "C",
+                "time_reference": "06:27:42 - 06:31:00"
+            },
+            {
+                "question_id": 1,
+                "query": "According to the surveillance footage, if an animal resembling a pheasant appeared, what is its sex?",
+                "options": [
+                    "A. Did not appear",
+                    "B. Male",
+                    "C. Female",
+                    "D. Both male and female"
+                ],
+                "answer": "D",
+                "time_reference": "01:14:20 - 01:15:20"
+            },
+            {
+                "question_id": 2,
+                "query": "Did a fox appear in the surveillance footage? If so, around what time did it appear first time?",
+                "options": [
+                    "A. No, there was no fox in the footage.",
+                    "B. Yes, it appeared around 20:00",
+                    "C. Yes, it appeared around 20:05",
+                    "D. Yes, it appeared at around 19:55. "
+                ],
+                "answer": "D",
+                "time_reference": "08:05:52 - 08:16:00"
+            },
+            {
+                "question_id": 3,
+                "query": "How many badgers appeared between 21:00 and 21:30 in the surveillance footage?",
+                "options": [
+                    "A. 5",
+                    "B. 6",
+                    "C. 3",
+                    "D. 4"
+                ],
+                "answer": "D",
+                "time_reference": "N/A"
+            },
+            {
+                "question_id": 4,
+                "query": "Around what time did daylight begin, as indicated by the camera switching off night vision mode?",
+                "options": [
+                    "A. 06:04",
+                    "B. 06:05",
+                    "C. 06:06",
+                    "D. 06:07"
+                ],
+                "answer": "C",
+                "time_reference": "1:03:00"
+            },
+            {
+                "question_id": 5,
+                "query": "Around what time did it start getting dark (indicated by the activation of night vision on the camera)?",
+                "options": [
+                    "A. 20:48",
+                    "B. 20:49",
+                    "C. 20:50",
+                    "D. 20:51"
+                ],
+                "answer": "B",
+                "time_reference": "8:59:42"
+            },
+            {
+                "question_id": 6,
+                "query": "Did any wood pigeons appear in the surveillance footage? If so, how many were they when they firstly appeared?",
+                "options": [
+                    "A. 2",
+                    "B. 0",
+                    "C. 1",
+                    "D. 3"
+                ],
+                "answer": "A",
+                "time_reference": "2:49:20"
+            },
+            {
+                "question_id": 7,
+                "query": "Are foxes active at night according to the surveillance footage?",
+                "options": [
+                    "A. Yes, the fox appeared with badgers",
+                    "B. No, according to the footage, foxes were only observed active during daylight hours.",
+                    "C. Yes, the fox appeared with dear",
+                    "D. Yes, the fox appeared with wood pigeons"
+                ],
+                "answer": "A",
+                "time_reference": "9:29:23"
+            }
+        ]
+    },
+    {
+        "video_id": 2,
+        "video_key": "wildlife2",
+        "qa": [
+            {
+                "question_id": 0,
+                "query": "What animals appeared in the surveillance footage?",
+                "options": [
+                    "A. Bird, Raccoon, Deer, Squirrel, Fox",
+                    "B. Bird, Raccoon, Deer",
+                    "C. Bird, Raccoon, Deer, Fox",
+                    "D. Bird, Raccoon, Fox"
+                ],
+                "answer": "A",
+                "time_reference": "N/A"
+            },
+            {
+                "question_id": 1,
+                "query": "What colors of birds have appeared in the surveillance footage?",
+                "options": [
+                    "A. Blue, Brown",
+                    "B. Red, Blue, Brown",
+                    "C. Red, Blue",
+                    "D. Red, Brown"
+                ],
+                "answer": "B",
+                "time_reference": "N/A"
+            },
+            {
+                "question_id": 2,
+                "query": "When was the deer firstly and clearly captured by the surveillance footage?",
+                "options": [
+                    "A. At night, about 21:15",
+                    "B. No, the deer was not captured",
+                    "C. At night, about 21:30",
+                    "D. At night, about 21:00"
+                ],
+                "answer": "A",
+                "time_reference": "N/A"
+            },
+            {
+                "question_id": 3,
+                "query": "Around what time did daylight begin, as indicated by the camera switching off night vision mode?",
+                "options": [
+                    "A. about 5:50",
+                    "B. about 6:00",
+                    "C. about 6:05",
+                    "D. about 6:10"
+                ],
+                "answer": "B",
+                "time_reference": "N/A "
+            },
+            {
+                "question_id": 4,
+                "query": "How many squirrels appeared in the surveillance footage at the same time?",
+                "options": [
+                    "A. 3",
+                    "B. 2",
+                    "C. 1",
+                    "D. 0"
+                ], 
+                "answer": "B",
+                "time_reference": "10:26:33"
+            },
+            {
+                "question_id": 5,
+                "query": "According to the surveillance footage, which animals have been observed drinking water from the basin on the far left?",
+                "options": [
+                    "A. Raccoon",
+                    "B. Raccoon, fox",
+                    "C. Raccoon, bird",
+                    "D. Raccoon, deer"
+                ],
+                "answer": "C",
+                "time_reference": "N/A"
+            },
+            {
+                "question_id": 6,
+                "query": "What is the maximum number of raccoons that appeared simultaneously in the surveillance video?",
+                "options": [
+                    "A. 4",
+                    "B. 5",
+                    "C. 6",
+                    "D. 7"
+                ],
+                "answer": "C",
+                "time_reference": "N/A"
+            }
+        ]
+    }
+]

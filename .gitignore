@@ -178,3 +178,8 @@ AVA_cache/
 
 # video data
 datas/*/videos/*
+
+/outputs
+/outputs/*
+
+/test*

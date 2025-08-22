@@ -1,0 +1,314 @@
+[
+    {
+        "video_id": 1,
+        "video_key": "traffic1",
+        "qa": [
+            {
+                "question_id": 0,
+                "query": "Between 4:30 and 4:40, did an red car pass the intersection, and if so, what direction did it go?",
+                "options": [
+                    "A. Yes, it went straight.",
+                    "B. Yes, it turned its right.",
+                    "C. Yes, it turned its left.",
+                    "D. No orange car passed the intersection during this time."
+                ],
+                "answer": "B",
+                "time_reference": "1:27:35"
+            },
+            {
+                "question_id": 1,
+                "query": "Between 6:20 and 6:25, did a taxi pass the intersection, and if so, what direction did it go?",
+                "options": [
+                    "A. Yes, it came from the right and turned right.",
+                    "B. Yes, it came from the left and turned right.",
+                    "C. Yes, it came from the right and went straight.",
+                    "D. No taxi was observed passing the intersection during this time."
+                ],
+                "answer": "B",
+                "time_reference": "3:12:16"
+            },
+            {
+                "question_id": 2,
+                "query": "Between 5:15 and 5:20, did a bus pass the intersection, and if so, at what time did it pass?",
+                "options": [
+                    "A. A black bus passed the intersection around 5:10.",
+                    "B. A blue bus passed the intersection around 5:15.",
+                    "C. A white bus passed the intersection around 5:20.",
+                    "D. No bus passed the intersection during this time."
+                ],
+                "answer": "B",
+                "time_reference": "2:08:17"
+            },
+            {
+                "question_id": 3,
+                "query": "Between 6:30 and 6:35, did any pedestrians cross the intersection, and if so, in what did they do",
+                "options": [
+                    "A. A person crossed the street at the intersection and went straight ahead.",
+                    "B. A person passed through the intersection riding a bicycle.",
+                    "C. A person ran across the intersection.",
+                    "D. No person was observed crossing the street at the intersection during this time."
+                ],
+                "answer": "A",
+                "time_reference": "3:26:01"
+            },
+            {
+                "question_id": 4,
+                "query": "Between 6:50 and 7:00, which of the following statements about a truck at the intersection is true?",
+                "options": [
+                    "A. A truck passed the intersection, and it had a red cab and silver body.",
+                    "B. A truck passed the intersection, and it had a blue cab and silver body.",
+                    "C. A truck passed the intersection, and it had a white cab and black body.",
+                    "D. No truck was observed passing the intersection during this time."
+                ],
+                "answer": "B",
+                "time_reference": "3:44:07"
+            },
+            {
+                "question_id": 5,
+                "query": "Between 7:15 and 7:20, did a tow truck pass the intersection? If so, what was it towing?",
+                "options": [
+                    "A. A tow truck passed the intersection, towing a red car.",
+                    "B. A tow truck passed the intersection, towing a yellow construction vehicle.",
+                    "C. A tow truck passed the intersection, but it was not towing anything.",
+                    "D. No tow truck was observed passing the intersection during this time."
+                ],
+                "answer": "B",
+                "time_reference": "4:23:25"
+            },
+            {
+                "question_id": 6,
+                "query": "How many buses passed the intersection between 8:30 and 8:35?",
+                "options": [
+                    "A. 0",
+                    "B. 1",
+                    "C. 2",
+                    "D. 3"
+                ],
+                "answer": "C",
+                "time_reference": "5:23:33, 5:25:34"
+            },
+            {
+                "question_id": 7,
+                "query": "How many trucks passed the intersection between 9:50 and 10:00?",
+                "options": [
+                    "A. 1",
+                    "B. 2",
+                    "C. 3",
+                    "D. 4"
+                ],
+                "answer": "C",
+                "time_reference": "6:41:36, 6:46:03, 6:46:57"
+            },
+            {
+                "question_id": 8,
+                "query": "Around 12:35, which of the following statements about a person on a bicycle at the intersection is true?",
+                "options": [
+                    "A. A person on a bicycle turned right at the intersection.",
+                    "B. A person was running through the intersection.",
+                    "C. No person on a bicycle was observed at the intersection during this time.",
+                    "D. A person on a bicycle crossed the crosswalk and continued straight."
+                ],
+                "answer": "D",
+                "time_reference": "9:27:17"
+            },
+            {
+                "question_id": 9,
+                "query": "Around what time did the 902 bus pass the intersection?",
+                "options": [
+                    "A. Around 16:30",
+                    "B. Around 16:00",
+                    "C. Around 15:30",
+                    "D. Around 17:00"
+                ],
+                "answer": "B",
+                "time_reference": "12:16:30"
+            },
+            {
+                "question_id": 10,
+                "query": "Was there traffic congestion at the intersection between 16:00 and 16:10?",
+                "options": [
+                    "A. No, there was no congestion.",
+                    "B. Yes, due to a traffic light malfunction.",
+                    "C. Yes, an accident involving multiple cars caused congestion.",
+                    "D. Yes, a 869 bus blocked pedestrians."
+                ],
+                "answer": "D",
+                "time_reference": "12:46:45"
+            },
+            {
+                "question_id": 11,
+                "query": "Around 14:49, why did the orange van past the stop line and stop in the middle of the intersection?",
+                "options": [
+                    "A. Because it had a mechanical problem.",
+                    "B. To make a right turn.",
+                    "C. To wait for the traffic light to change.",
+                    "D. To wait for other vehicles before completing a left turn."
+                ],
+                "answer": "D",
+                "time_reference": "11:34:45"
+            }
+        ]
+    },
+    {
+        "video_id": 2,
+        "video_key": "traffic2",
+        "qa": [
+            {
+                "question_id": 0,
+                "query": "Around 3:45, was a pickup truck observed passing the intersection? If so, what color was it?",
+                "options": [
+                    "A. Yes, it was black.",
+                    "B. Yes, it was white.",
+                    "C. Yes, it was red.",
+                    "D. No pickup truck was observed passing."
+                ],
+                "answer": "B",
+                "time_reference": "00:36:54"
+            },
+            {
+                "question_id": 1,
+                "query": "Between 3:55 and 4:00, was a black box truck observed passing through the intersection? If yes, what direction did it travel?",
+                "options": [
+                    "A. Yes, it came from the right and drove straight.",
+                    "B. Yes, it came from the left and drove straight towards the right.",
+                    "C. No black delivery truck was observed.",
+                    "D. Yes, it came from the left and turned right."
+                ],
+                "answer": "B",
+                "time_reference": "00:49:47"
+            },
+            {
+                "question_id": 2,
+                "query": "Around 5:03, was a pedestrian observed at the intersection? If yes, what action did they take?",
+                "options": [
+                    "A. Yes, they waited for the traffic light and crossed the road.",
+                    "B. No pedestrian was observed.",
+                    "C. Yes, they walked along the sidewalk without crossing.",
+                    "D. Yes, they ran across the road against the light."
+                ],
+                "answer": "A",
+                "time_reference": "1:54:45"
+            },
+            {
+                "question_id": 3,
+                "query": "Around 6:00, a very large truck was observed passing through the intersection. Which company did this truck belong to?",
+                "options": [
+                    "A. FedEx",
+                    "B. DHL",
+                    "C. Coca-Cola",
+                    "D. Pepsi"
+                ],
+                "answer": "C",
+                "time_reference": "6:00"
+            },
+            {
+                "question_id": 4,
+                "query": "Around 7:19, a bus was observed passing through the intersection. What was its route number?",
+                "options": [
+                    "A. 9654",
+                    "B. 8564",
+                    "C. 9564",
+                    "D. 8693"
+                ],
+                "answer": "C",
+                "time_reference": "4:10:50"
+            },
+            {
+                "question_id": 5,
+                "query": "Between 8:00 and 8:05, how many school buses were observed passing through the intersection?",
+                "options": [
+                    "A. 4",
+                    "B. 1",
+                    "C. 2",
+                    "D. 3"
+                ],
+                "answer": "D",
+                "time_reference": "4:53:45,4:54:43,4:56:00"
+            },
+            {
+                "question_id": 6,
+                "query": "Around what time was a truck from WCP Solutions observed passing through the intersection?",
+                "options": [
+                    "A. Around 9:20",
+                    "B. Around 9:30",
+                    "C. Around 9:10",
+                    "D. Around 9:00"
+                ],
+                "answer": "C",
+                "time_reference": "9:10"
+            },
+            {
+                "question_id": 7,
+                "query": "What was the direction of travel for the FedEX truck observed passing through the intersection at 9:35?",
+                "options": [
+                    "A. It came from the right and drove straight towards the left.",
+                    "B. It came from the left and turned right.",
+                    "C. It came from the right and turned left.",
+                    "D. It came from the left and drove straight towards the right."
+                ],
+                "answer": "A",
+                "time_reference": "6:26:53"
+            },
+            {
+                "question_id": 8,
+                "query": "Around 10:12, a large deliver truck was observed passing through the intersection. What cargo was it carrying?",
+                "options": [
+                    "A. Gravel",
+                    "B. Shipping containers",
+                    "C. Wood.",
+                    "D. Steel pipes"
+                ],
+                "answer": "C",
+                "time_reference": "7:03:55"
+            },
+            {
+                "question_id": 9,
+                "query": "Around 11:27, why were the cars in the right-turn lane on the left side of the frame blocked?",
+                "options": [
+                    "A. An accident blocked the lane.",
+                    "B. They were yielding to pedestrians crossing the road.",
+                    "C. A broken-down vehicle was obstructing the lane.",
+                    "D. A traffic light malfunction occurred."
+                ],
+                "answer": "B",
+                "time_reference": "8:14:46"
+            },
+            {
+                "question_id": 10,
+                "query": "Immediately after the bus with route number 7222 passed through the intersection, what was the route number of the next bus observed?",
+                "options": [
+                    "A. 9555",
+                    "B. 7222",
+                    "C. 9545",
+                    "D. 9554"
+                ],
+                "answer": "D",
+                "time_reference": "9:32:25"
+            },
+            {
+                "question_id": 11,
+                "query": "Between 14:20 and 14:25, was a motorcycle observed passing through the intersection? If yes, what color was it?",
+                "options": [
+                    "A. Yes, it was black.",
+                    "B. Yes, it was yellow.",
+                    "C. No motorcycle was observed during this time.",
+                    "D. Yes, it was red."
+                ],
+                "answer": "B",
+                "time_reference": "11:08:49"
+            },
+            {
+                "question_id": 12,
+                "query": "Between 15:31 and 15:35, was a police car observed passing through the intersection? If yes, what direction did it travel?",
+                "options": [
+                    "A. Yes, it turned left.",
+                    "B. Yes, it drove straight through.",
+                    "C. Yes, it turned right.",
+                    "D. No police car was observed during this time."
+                ],
+                "answer": "B",
+                "time_reference": "12:16:41"
+            }
+        ]
+    }
+]

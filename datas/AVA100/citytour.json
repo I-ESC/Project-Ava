@@ -1,0 +1,521 @@
+[
+    {
+        "video_id": 1,
+        "video_key": "citytour1",
+        "qa":[
+            {
+                "question_id": 0,
+                "query": "What’s the weather like?",
+                "options": [
+                    "A. Snowing",
+                    "B. Cloudy",
+                    "C. Sunny",
+                    "D. Rainy"
+                ],
+                "answer": "A",
+                "time_reference": "N/A",
+                "sub_video": "UHuQ1jc_hB4"
+            },
+            {
+                "question_id": 1,
+                "query": "What shop did camera wearer pass before the coffee shop called Espresso?",
+                "options": [
+                    "A. KFC",
+                    "B. Bakery",
+                    "C. Starbuck",
+                    "D. Creperie"
+                ],
+                "answer": "D",
+                "time_reference": "00:1:20",
+                "sub_video": "UHuQ1jc_hB4"
+            },
+            {
+                "question_id": 2,
+                "query": "As camera wearer passed by the church, the warning sign at the intersection alerted people to be cautious on which side?",
+                "options": [
+                    "A. Left",
+                    "B. Right",
+                    "C. Up",
+                    "D. Back"
+                ],
+                "answer": "B",
+                "time_reference": "00:24:46",
+                "sub_video": "UHuQ1jc_hB4"
+            },
+            {
+                "question_id": 3,
+                "query": "The monument at the entrance of the Bank of Montreal commemorates its anniversary of how many years since its establishment?",
+                "options": [
+                    "A. 100",
+                    "B. 150",
+                    "C. 200",
+                    "D. 250"
+                ],
+                "answer": "A",
+                "time_reference": "00:47:40",
+                "sub_video": "UHuQ1jc_hB4"
+            },
+            {
+                "question_id": 4,
+                "query": "What are the daily opening hours of the art exhibition titled “SOLSTICE” which the camera wearer passed by?",
+                "options": [
+                    "A. 4:00 PM – 11:00 PM",
+                    "B. 4:00 AM – 11:00 PM",
+                    "C. 11:00 AM – 4:00 PM",
+                    "D. 11:00 AM – 11:00 PM"
+                ],
+                "answer": "A",
+                "time_reference": "01:16:50",
+                "sub_video": "UHuQ1jc_hB4"
+            },
+            {
+                "question_id": 5,
+                "query": "what is the promotional price of a burger advertised at the entrance of the “A&G” burger shop?",
+                "options": [
+                    "A. $4.49",
+                    "B. $4.09",
+                    "C. $3.99",
+                    "D. $3.49"
+                ],
+                "answer": "A",
+                "time_reference": "01:51:18",
+                "sub_video": "UHuQ1jc_hB4"
+            },
+            {
+                "question_id": 6,
+                "query": "As the camera wearer walks past an orange construction vehicle equipped with a mobile LED information display, what is the vehicle’s license plate number?",
+                "options": [
+                    "A. RQ3151P",
+                    "B. RG1471P",
+                    "C. RK1222Q",
+                    "D. RL1222Q"
+                ],
+                "answer": "B",
+                "time_reference": "02:06:29",
+                "sub_video": "UHuQ1jc_hB4"
+            },
+            {
+                "question_id": 7,
+                "query": "While the camera wearer is observing a sculpture on the wall inside a church, what change occurs in the lighting?",
+                "options": [
+                    "A. The blue light dims and turns into red.", 
+                    "B. The white light fades and turns off.",
+                    "C. The red light turns into blue.",
+                    "D. The light stays on."
+                ],
+                "answer": "C",
+                "time_reference": "02:52:36",
+                "sub_video": "UHuQ1jc_hB4"
+            },
+            {
+                "question_id": 8,
+                "query": "What is the large red and blue archway that the camera wearer passes by?",
+                "options": [
+                    "A. The entrance to a traditional market.",
+                    "B. The main gate of a city park.",
+                    "C. The gate of a Buddhist temple.",
+                    "D. The entrance to Chinatown."
+                ],
+                "answer": "D",
+                "time_reference": "03:28:11",
+                "sub_video": "nFpwVy7993o"
+            },
+            {
+                "question_id": 9,
+                "query": "After the camera wearer sees the Rideau Centre, which direction do they turn?",
+                "options":[
+                    "A. Left",
+                    "B. Right",
+                    "C. Turn around (180 degrees)",
+                    "D. Go straight ahead"
+                ],
+                "answer": "C",
+                "time_reference": "04:03:40",
+                "sub_video": "nFpwVy7993o"
+            },
+            {
+                "question_id": 10,
+                "query": "What are the exhibition dates for “Iceberg”?",
+                "options": [
+                    "A. December 1, 2022 to March 5, 2023",
+                    "B. November 15, 2022 to February 28, 2023",
+                    "C. December 15, 2022 to March 15, 2023",
+                    "D. January 1, 2023 to April 1, 2023"
+                ],
+                "answer": "A",
+                "time_reference": "04:24:31",
+                "sub_video": "nFpwVy7993o"
+            },
+            {
+                "question_id": 11,
+                "query": "When the camera wearer stops in front of a shop with roasted ducks hanging in the window, what is printed on the advertisement board next to it?",
+                "options": [
+                    "A. SPA",
+                    "B. ATM services, phone repair",
+                    "C. Printing signs stamps, hair cut",
+                    "D. Fresh produce, bakery, and seafood"
+                ],
+                "answer": "C",
+                "time_reference": "05:02:53",
+                "sub_video": "nFpwVy7993o"
+            },
+            {
+                "question_id": 12,
+                "query": "How much does it cost to park at a parking lot near Shoppers Drug Mart?",
+                "options": [
+                    "A. $15 daily maximum",
+                    "B. $5 per hour",
+                    "C. $2 for the first 30 minutes, then $3 per hour",
+                    "D. $10 FLAT RATE"
+                ],
+                "answer": "D",
+                "time_reference": "05:20:56",
+                "sub_video": "nFpwVy7993o"
+            },
+            {
+                "question_id": 13,
+                "query": "From the camera wearer’s perspective, what is the spatial relationship between the Cannabis store and Zanzibar Club?",
+                "options": [
+                    "A. The Cannabis store is on the left and the Zanz Bar is on the right.",
+                    "B. The Cannabis store is on the right and the Zanz Bar is on the left.",
+                    "C. The Cannabis store is in front of the Zanz Bar.",
+                    "D. The Cannabis store is on the ."
+                ],
+                "answer": "A",
+                "time_reference": "05:57:38",
+                "sub_video": "nFpwVy7993o"
+            },
+            {
+                "question_id": 14,
+                "query": "When the camera wearer is waiting at a traffic light under the Yorkville Ave sign, what color is the car stopped in front of the crosswalk?",
+                "options": [
+                    "A. Red",
+                    "B. Blue",
+                    "C. Black",
+                    "D. White"
+                ],
+                "answer": "D",
+                "time_reference": "06:36:51",
+                "sub_video": "nFpwVy7993o"
+            },
+            {
+                "question_id": 15,
+                "query": "As the camera wearer walks past trees decorated with colorful spherical ornaments, which store do they pass by?",
+                "options": [
+                    "A. Lululemon",
+                    "B. H&M",
+                    "C. ZARA",
+                    "D. MARBL"
+                ],
+                "answer": "D",
+                "time_reference": "08:31:41",
+                "sub_video": "TW2nkSDV5O0"
+            },
+            {
+                "question_id": 16,
+                "query": "Is there a coffee shop next to metro.ca? If so, what brand is it?",
+                "options": [
+                    "A. Yes, it is a Starbucks.",
+                    "B. Yes, it is a Tim Hortons.",
+                    "C. No, there is no coffee shop next to metro.ca.",
+                    "D. Yes, it is a Dunkin'"
+                ],
+                "answer": "A",
+                "time_reference": "09:11:18",
+                "sub_video": "TW2nkSDV5O0"
+            },
+            {
+                "question_id": 17,
+                "query": "Is the moving bear watched by the camera wearer on the street real or someone in a costume?",
+                "options": [
+                    "A. It is a real bear.",
+                    "B. It looks like someone in a costume",
+                    "C. It is a video displayed on a screen.",
+                    "D. It is a bear-shaped statue."
+                ],
+                "answer": "B",
+                "time_reference": "10:09:08",
+                "sub_video": "MxnzNCXJhh8"
+            },
+            {
+                "question_id": 18,
+                "query": "What tools are used to clear the snow under the bridge?",
+                "options": [
+                    "A. They use a snowplow truck",
+                    "B. They use snow shovels and brooms.",
+                    "C. They use two snow removal tractors to clear the snow",
+                    "D. They use a snowblower"
+                ],
+                "answer": "C",
+                "time_reference": "10:22:27",
+                "sub_video": "MxnzNCXJhh8"
+            }
+        ] 
+    },
+    {
+        "video_id": 2,
+        "video_key": "citytour2",
+        "qa": [
+            {
+                "question_id": 0,
+                "query": "What’s the weather like?",
+                "options": [
+                    "A. Snowing",
+                    "B. Cloudy",
+                    "C. Sunny",
+                    "D. Rainy"
+                ],
+                "answer": "C",
+                "time_reference": "N/A",
+                "sub_video": "yNun-Rs-OU4"
+            },
+            {
+                "question_id": 1,
+                "query": "What time was it when Union Station was seen by the camera wearer?",
+                "options": [
+                    "A. About 10:00 AM",
+                    "B. About 11:30 AM",
+                    "C. About 12:30 PM",
+                    "D. About 1:30 PM"
+                ],
+                "answer": "B",
+                "time_reference": "00:01:42",
+                "sub_video": "yNun-Rs-OU4"
+            },
+            {
+                "question_id": 2,
+                "query": "What did the sign in front of the Canadian Imperial Bank of Commerce remind me of?",
+                "options": [
+                    "A. No smoking, no vaping",
+                    "B. Bank opening and closing times",
+                    "C. Currency exchange rates",
+                    "D. ATM availability hours"
+                ],
+                "answer": "A",
+                "time_reference": "00:39:53",
+                "sub_video": "yNun-Rs-OU4"
+            },
+            {
+                "question_id": 3,
+                "query": "After going to the Canadian Imperial Bank of Commerce, which bank did the camera wearer pass by?",
+                "options": [
+                    "A. Royal Bank of Canada",
+                    "B. Toronto Dominion Bank",
+                    "C. Bank of Montreal",
+                    "D. Scotiabank"
+                ],
+                "answer": "C",
+                "time_reference": "01:04:12",
+                "sub_video": "yNun-Rs-OU4"
+            },
+            {
+                "question_id": 4,
+                "query": "Where did the camera wearer encounter a man with long hair wearing a yellow and black checkered shirt?",
+                "options": [
+                    "A. Mccaul St",
+                    "B. Bay St",
+                    "C. King St East",
+                    "D. Yonge St"
+                ],
+                "answer": "A",
+                "time_reference": "01:33:29",
+                "sub_video": "yNun-Rs-OU4"
+            },
+            {
+                "question_id": 5,
+                "query": "At what time is left turning prohibited on Dundas St W?",
+                "options": [
+                    "A. 8:00 AM – 10:00 AM",
+                    "B. 7:30 AM – 9:30 AM",
+                    "C. 7:00 AM – 9:00 AM",
+                    "D. 6:30 AM – 8:30 AM"
+                ],
+                "answer": "B",
+                "time_reference": "01:49:52",
+                "sub_video": "yNun-Rs-OU4"
+            },
+            {
+                "question_id": 6,
+                "query": "In the camera wearer’s view, what is the left-to-right order of the three stores: Sanagan’s Meat Locker, Aion Amor, and Taco101?",
+                "options": [
+                    "A. Sanagan’s Meat Locker, Aion Amor, Taco101",
+                    "B. Aion Amor, Sanagan’s Meat Locker, Taco101",
+                    "C. Taco101, Aion Amor, Sanagan’s Meat Locker",
+                    "D. Aion Amor, Taco101, Sanagan’s Meat Locker"
+                ],
+                "answer": "A",
+                "time_reference": "02:28:56",
+                "sub_video": "yNun-Rs-OU4"
+            },
+            {
+                "question_id": 7,
+                "query": "Which direction did the camera wearer walk after seeing the Royal Alexandra Theatre?",
+                "options": [
+                    "A. Left",
+                    "B. Right",
+                    "C. Up",
+                    "D. Down"
+                ],
+                "answer": "B",
+                "time_reference": "03:05:40",
+                "sub_video": "VMaFMLZPfG0"
+            },
+            {
+                "question_id": 8,
+                "query": "What is the street number of Easy Financial as seen by the camera wearer?",
+                "options": [
+                    "A. 123",
+                    "B. 124",
+                    "C. 221",
+                    "D. 222"
+                ],
+                "answer": "C",
+                "time_reference": "03:41:49",
+                "sub_video": "VMaFMLZPfG0"
+            },
+            {
+                "question_id": 9,
+                "query": "Which of the following stores is located on Queen West?",
+                "options": [
+                    "A. Mcdonald's",
+                    "B. Taco 101",
+                    "C. Easy Financial",
+                    "D. Six pizza"
+                ],
+                "answer": "D",
+                "time_reference": "05:09:42",
+                "sub_video": "VMaFMLZPfG0"
+            },
+            {
+                "question_id": 10,
+                "query": "What is the license plate number of the white Lamborghini seen by the camera wearer on the street?",
+                "options": [
+                    "A. CZZB438",
+                    "B. CZAB493",
+                    "C. CZAC349",
+                    "D. AZXC934"
+                ],
+                "answer": "C",
+                "time_reference": "05:50:40",
+                "sub_video": "VMaFMLZPfG0"
+            },
+            {
+                "question_id": 11,
+                "query": "What is the purpose of the oddly-shaped silver and glass building seen across the street by the camera wearer?",
+                "options": [
+                    "A. It appears to be an exhibition hall showcasing a T.rex theme.",
+                    "B. It is a luxury hotel with modern architecture.",
+                    "C. It is a public library with a unique design.",
+                    "D. It’s a corporate office building for a tech company."
+                ],
+                "answer": "A",
+                "time_reference": "06:31:30",
+                "sub_video": "v=Ex5_d0NyWO8"
+            },
+            {
+                "question_id": 12,
+                "query": "What is the name of the restaurant with a yellow canopy seen by the camera wearer at an intersection on Brunswick Avenue?",
+                "options": [
+                    "A. Yellow Garden",
+                    "B. By the way",
+                    "C. Canopy Bistro",
+                    "D. Sunny Side Café"
+                ],
+                "answer": "B",
+                "time_reference": "06:51:03",
+                "sub_video": "v=Ex5_d0NyWO8"
+            },
+            {
+                "question_id": 13,
+                "query": "What type of store did the camera wearer see a poop emoji statue in front of?",
+                "options": [
+                    "A. Toy store",
+                    "B. Art gallery",
+                    "C. Bookstore",
+                    "D. Restaurant"
+                ],
+                "answer": "D",
+                "time_reference": "07:03:18",
+                "sub_video": "v=Ex5_d0NyWO8"
+            },
+            {
+                "question_id": 14,
+                "query": "What did the camera wearer see after passing the blue signboard marked “Entrance”?",
+                "options": [
+                    "A. A quiet alley with no one around",
+                    "B. A busy street with people walking by",
+                    "C. A food truck selling ice cream",
+                    "D. A live outdoor event hosted by SiriusXM with people gathering and chatting"
+                ],
+                "answer": "D",
+                "time_reference": "07:57:53",
+                "sub_video": "v=Ex5_d0NyWO8"
+            },
+            {
+                "question_id": 15,
+                "query": "What accident happened after the camera wearer saw a man wearing colorful Hawaiian shirt pushing a stroller?",
+                "options": [
+                    "A.  A passerby stopped him to ask for directions.",
+                    "B.  A car suddenly stopped in front of him.",
+                    "C.  The stroller bumped into the wall next to him. ",
+                    "D.  A bicyclist crashed into him."
+                ],
+                "answer": "B",
+                "time_reference": "08:27:27",
+                "sub_video": "v=Ex5_d0NyWO8"
+            },
+            {
+                "question_id": 16,
+                "query": "What is the last day of the musical show “Let’s Dance”?",
+                "options": [
+                    "A.  August 20",
+                    "B.  August 10",
+                    "C.  August 15",
+                    "D.  August 23"
+                ],
+                "answer": "A",
+                "time_reference": "09:02:34",
+                "sub_video": "v=Ex5_d0NyWO8"                
+            },
+            {
+                "question_id": 17,
+                "query": "On which street did the camera wearer encounter the 506 bus?",
+                "options": [
+                    "A.  Queen St W",
+                    "B.  King St W",
+                    "C.  Dundas St W",
+                    "D.  Wellesley St E"
+                ],
+                "answer": "D",
+                "time_reference": "09:37:40",
+                "sub_video": "6jSnn4wtmC8"
+            },
+            {
+                "question_id": 18,
+                "query": "The camera wearer sees two people playing musical instruments on the street. What instruments are they playing?",
+                "options": [
+                    "A.  Piano and drums",
+                    "B.  Violin and guitar",
+                    "C.  Guitar and saxophone",
+                    "D.  Flute and clarinet"
+                ],
+                "answer": "B",
+                "time_reference": "10:02:12",
+                "sub_video": "6jSnn4wtmC8"
+            },
+            {
+                "question_id": 19,
+                "query": "When the camera wearer walked past an underpass near The Esplanade, why were all the cars on the road stopped?",
+                "options": [
+                    "A. There was a car accident ahead",
+                    "B. There was police activity ahead",
+                    "C. The cars were waiting at a red light",
+                    "D. A parade was passing by"
+                ],
+                "answer": "C",
+                "time_reference": "10:27:20",
+                "sub_video": "6jSnn4wtmC8"
+            }
+        ]
+    }
+]

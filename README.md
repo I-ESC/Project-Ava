@@ -161,11 +161,11 @@ python query_CA.py --model qwenvl --dataset lvbench --video_id -1 --gpus 1
 
 If you use this repo, please cite our paper:
 ```bibtex
-@article{ava,
-  title={Empowering Agentic Video Analytics Systems with Video Language Models},
+@inproceedings{ava,
+  title={AVA: Towards Agentic Video Analytics with Vision Language Models},
   author={Yan, Yuxuan and Jiang, Shiqi and Cao, Ting and Yang, Yifan and Yang, Qianqian and Shu, Yuanchao and Yang, Yuqing and Qiu, Lili},
-  journal={arXiv preprint arXiv:2505.00254},
-  year={2025}
+  booktitle={USENIX Symposium on Networked Systems Design and Implementation (NSDI)},
+  year={2026}
 }
 ```
 

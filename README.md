@@ -1,5 +1,5 @@
 # Project-Ava
-An implementation of Paper "Empowering Agentic Video Analytics Systems with Video Language Models"
+An implementation of Paper "AVA: Towards Agentic Video Analytics with Vision Language Models"
 > 📰 **Paper:**  [Arxiv](https://arxiv.org/abs/2505.00254)
 
 ## 📰 News
